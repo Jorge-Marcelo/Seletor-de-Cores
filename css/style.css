@@ -13,10 +13,12 @@ width: 300px;
 border-radius: 8px;
 border: 2px solid #364347;
 box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-position: absolute;
-top: 50%;
-left: 50%;
-transform: translate(-50%, -50%);
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+margin: auto;
+margin-top: 20px;
 }
 
 .painel-row {
@@ -40,6 +42,15 @@ background: #15191c;
 padding: 8px;
 text-align: center;
 font-size: 1.5em;
+width: 280px;
+}
+
+.Title3 {
+background: #15191c;
+padding: 8px;
+text-align: center;
+font-size: 1.3em;
+width: 280px;
 }
 
 .Title2 {
@@ -47,6 +58,7 @@ background: #15191c;
 padding: 8px;
 text-align: center;
 font-size: 1.3em;
+width: 280px;
 }
 
 .efect-title {
@@ -110,14 +122,14 @@ pointer-events: none;
 z-index: 2;
 border: 2px solid #fff;
 transition: all 0.2s ease;
+width: 15px;
+height: 15px;
 }
 
 .color-cursor.dragging {
 transition: none;
 }
 .color-cursor#spectrum-cursor {
-width: 30px;
-height: 30px;
 margin-left: -15px;
 margin-top: -15px;
 top: 0;
@@ -125,7 +137,7 @@ left: 0;
 }
 .color-cursor#hue-cursor {
 top: 0;
-left: 50%;
+left: 600%;
 height: 20px;
 width: 20px;
 margin-top: -10px;
@@ -137,6 +149,7 @@ position: relative;
 width: 212px;
 height: 200px;
 overflow: hidden;
+cursor: pointer;
 }
 #spectrum-canvas {
 position: absolute;
@@ -147,6 +160,7 @@ left: 0;
 right: 0;
 bottom: 0;
 background: #ccc;
+cursor: pointer;
 }
 .hue-map {
 position: absolute;
@@ -154,17 +168,19 @@ top: 5px;
 bottom: 5px;
 right: 29px;
 width: 10px;
+cursor: pointer;
 }
 #hue-canvas {
 border-radius: 8px;
 position: absolute;
 top: 0;
-left: 0;
+left: 550%;
 right: 0;
 bottom: 0;
 width: 100%;
 height: 100%;
 background: #ccc;
+cursor: pointer;
 }
 
 .button {
@@ -184,9 +200,11 @@ background: #262c31;
 
 .button.eyedropper {
 position: relative;
-left: 30%;
-top: 0;
-width: 68px;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+width: 200px;
 height: 30px;
 margin: 10px 0;
 border: 1px solid white;
@@ -197,14 +215,16 @@ display: block;
 padding: 6px;
 width: 200px;
 margin: 10px auto 0;
+border: 1px solid white;
 }
 .button.mode-toggle {
 width: auto;
 height: 40px;
 border: 1px solid white;
+margin: 20px 0;
+padding: 10px;
 position: relative;
-left: 10%;
-margin: 10px 0;
+left: 30px;
 }
 
 .valor-campos {
@@ -233,6 +253,7 @@ text-align: center;
 color: #ffffff;
 font-size: 1rem;
 display: block;
+cursor: pointer;
 }
 
 .campos-rgb .grupo-campos {
@@ -243,6 +264,7 @@ align-items: center;
 .campos-rgb .campo-input {
 width: 60px;
 margin-right: 10px;
+cursor: pointer;
 }
 
 .campo-hex .campo-input {
@@ -285,5 +307,13 @@ cursor: pointer;
 .social:hover {
 transition: all 1s ease-in;
 transform: rotateY(360deg);
-background: linear-gradient(120deg, #ff00aa, rgb(255, 0, 98), rgb(255, 0, 191));
+background: linear-gradient(
+360deg,
+#ff0000,
+rgb(255, 94, 0),
+rgb(0, 255, 76),
+#008cff,
+#001aff
+);
 }
+
